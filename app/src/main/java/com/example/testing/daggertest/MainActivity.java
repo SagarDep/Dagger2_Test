@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         ActivityComponent mActivityComponent = DaggerActivityComponent.builder().activityModule(new ActivityModule()).build();
         mActivityComponent.inject(this);
 
+        ActivityComponent2 mActivityComponent2 = DaggerActivityComponent2.builder().activityModule2(new ActivityModule2()).build();
+        mActivityComponent2.inject(this);
+
         userModel.setName("Jeong");
 
         txtFirst = (TextView)findViewById(R.id.txt_first);
