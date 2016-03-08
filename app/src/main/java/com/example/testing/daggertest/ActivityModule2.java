@@ -2,8 +2,7 @@ package com.example.testing.daggertest;
 
 import android.util.Log;
 
-import com.example.testing.daggertest.UserModel;
-import com.example.testing.daggertest.UserModel2;
+import com.example.testing.daggertest.scope.PerActivity;
 
 import dagger.Module;
 import dagger.Provides;
@@ -15,12 +14,7 @@ import dagger.Provides;
 public class ActivityModule2 {
 
     @Provides
-    UserModel userModel(){
-        Log.d("ActivityModule2", "Provides UserModel");
-        return new UserModel();
-    }
-
-    @Provides
+    @PerActivity
     UserModel2 userModel2(){
         Log.d("ActivityModule2", "Provides UserModel2");
         return new UserModel2();

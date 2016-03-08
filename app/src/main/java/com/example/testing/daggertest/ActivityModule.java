@@ -16,10 +16,4 @@ public class ActivityModule {
         Log.d("ActivityModule", "Provides UserModel");
         return new UserModel();
     }
-
-    @Provides
-    UserModel2 userModel2(){
-        Log.d("ActivityModule", "Provides UserModel2");
-        return new UserModel2();
-    }
 }
