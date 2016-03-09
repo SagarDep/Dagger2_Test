@@ -8,6 +8,7 @@ import android.app.Application;
 public class Dagger2TestApplication extends Application {
 
     private Dagger2TestApplicationComponent component;
+    private  AComponent aComponent;
 
     @Override
     public void onCreate() {
@@ -15,6 +16,7 @@ public class Dagger2TestApplication extends Application {
 
         component = DaggerDagger2TestApplicationComponent.builder()
                 .dagger2TestApplicationModule(new Dagger2TestApplicationModule(this)).build();
+
     }
 
     Dagger2TestApplicationComponent getComponent(){

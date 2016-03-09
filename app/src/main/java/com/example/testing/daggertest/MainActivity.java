@@ -15,10 +15,14 @@ public class MainActivity extends AppCompatActivity {
     Context context;
 
     @Inject
-            UserModel userModel1;
+    UserModel userModel1;
 
     @Inject
-            UserModel userModel2;
+    UserModel userModel2;
+
+
+//    @Inject
+//    BModel bModel;
 
     TextView txtFirst;
     @Override
@@ -28,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         ((Dagger2TestApplication)getApplication()).getComponent().inject(this);
+
 
 
         if (context != null)

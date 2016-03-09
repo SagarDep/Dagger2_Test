@@ -20,13 +20,13 @@ public class Dagger2TestApplicationModule {
         this.application = application;
     }
 
-    @Provides @Singleton
+    @Provides
+    @Singleton
     Context providesContext(){
         return application;
     }
 
-    @Provides
-    @Singleton //있으면 하나 없으면 계속 생성에서 리턴.
+    @Provides//있으면 하나 없으면 계속 생성에서 리턴.
     UserModel providesUserModel(){
         return new UserModel();
     }
