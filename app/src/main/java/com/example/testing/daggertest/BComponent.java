@@ -8,5 +8,5 @@ import dagger.Component;
 @Component(modules = BModule.class,
         dependencies = AComponent.class)
 public interface BComponent {
-    void inject(MainActivity target);
+//    void inject(MainActivity target);
 }

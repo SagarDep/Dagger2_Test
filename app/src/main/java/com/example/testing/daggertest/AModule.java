@@ -8,10 +8,7 @@ import dagger.Provides;
  */
 @Module
 public class AModule {
-
-    @Provides AModel providesAModel(){
-        return new AModel();
+    @Provides UserModel providesUserModel(){
+        return new UserModel();
     }
-
-
 }

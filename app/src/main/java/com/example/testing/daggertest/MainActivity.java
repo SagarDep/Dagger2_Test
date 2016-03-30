@@ -11,18 +11,20 @@ import javax.inject.Inject;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Inject
-    Context context;
-
-    @Inject
-    UserModel userModel1;
-
-    @Inject
-    UserModel userModel2;
 
 
 //    @Inject
-//    BModel bModel;
+//    UserModel userModel1;
+//
+//    @Inject
+//    UserModel userModel2;
+//
+//    @Inject
+//    Context context;
+
+
+    @Inject
+    AModel aModel;
 
     TextView txtFirst;
     @Override
@@ -34,13 +36,18 @@ public class MainActivity extends AppCompatActivity {
         ((Dagger2TestApplication)getApplication()).getComponent().inject(this);
 
 
+//        AComponent aComponent = DaggerAComponent.builder().aModule(new AModule()).build();
+        aComponent.inject(this);
 
-        if (context != null)
-            Log.d("Dagger2", "Context is not null!");
-        if (userModel1 != null)
-            Log.d("Dagger2", "userModel1 is not null!" + userModel1);
-        if (userModel2 != null)
-            Log.d("Dagger2", "userModel2 is not null!" + userModel2);
+
+
+
+//        if (context != null)
+//            Log.d("Dagger2", "Context is not null!");
+//        if (userModel1 != null)
+//            Log.d("Dagger2", "userModel1 is not null!" + userModel1);
+//        if (userModel2 != null)
+//            Log.d("Dagger2", "userModel2 is not null!" + userModel2);
 
 
 
